@@ -1,0 +1,52 @@
+{
+    "name": "tchin-backend",
+    "version": "1.0.0",
+    "description": "Boilerplate for Node servers",
+    "main": "index.ts",
+    "scripts": {
+        "start": "eslint ./**/*.ts && nodemon",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "node",
+        "backend",
+        "express",
+        "boilerplate"
+    ],
+    "author": "Tristan Chin",
+    "license": "ISC",
+    "engines": {
+        "node": "11.6.0"
+    },
+    "dependencies": {
+        "@types/body-parser": "^1.17.0",
+        "@types/express": "^4.16.1",
+        "@types/fs-extra": "^7.0.0",
+        "@types/gulp": "^4.0.6",
+        "@types/helmet": "0.0.43",
+        "@types/lodash": "^4.14.129",
+        "@types/moment": "^2.13.0",
+        "@types/rimraf": "^2.0.2",
+        "@types/shelljs": "^0.8.5",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0",
+        "body-parser": "^1.19.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-config-prettier": "^4.3.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-prettier": "^3.1.0",
+        "express": "^4.17.0",
+        "fs-extra": "^8.0.1",
+        "gulp": "^4.0.2",
+        "helmet": "^3.18.0",
+        "lodash": "^4.17.11",
+        "moment": "^2.24.0",
+        "nodemon": "^1.19.0",
+        "prettier": "^1.17.1",
+        "rimraf": "^2.6.3",
+        "shelljs": "^0.8.3",
+        "ts-node": "^8.1.0",
+        "typescript": "^3.4.5"
+    }
+}
