@@ -1,6 +1,6 @@
 {
     "name": "tchin-backend",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Boilerplate for Node servers",
     "main": "index.ts",
     "scripts": {
@@ -13,6 +13,10 @@
         "express",
         "boilerplate"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/maxijonson/tchin-backend.git"
+    },
     "author": "Tristan Chin",
     "license": "ISC",
     "engines": {
@@ -25,7 +29,6 @@
         "@types/gulp": "^4.0.6",
         "@types/helmet": "0.0.43",
         "@types/lodash": "^4.14.129",
-        "@types/moment": "^2.13.0",
         "@types/rimraf": "^2.0.2",
         "@types/shelljs": "^0.8.5",
         "@typescript-eslint/eslint-plugin": "^1.9.0",
