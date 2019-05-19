@@ -1,6 +1,6 @@
 {
     "name": "tchin-backend",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Boilerplate for Node servers",
     "main": "index.ts",
     "scripts": {
