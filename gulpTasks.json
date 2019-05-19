@@ -1,4 +1,8 @@
 {
+    "COMPILE": {
+        "task": "compile",
+        "hook": null
+    },
     "BUMP_START": {
         "task": "bump-start",
         "hook": null

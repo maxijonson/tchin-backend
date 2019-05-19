@@ -6,6 +6,7 @@ import * as shell from "shelljs";
 import rmrf from "rimraf";
 import fse from "fs-extra";
 import {
+    COMPILE,
     PUBLISH,
     PUBLISH_MINOR,
     PUBLISH_MAJOR,
@@ -58,6 +59,17 @@ gulp.task(
 
 const [major, minor, patch] = pkg.version.split(".");
 let newVersion: string;
+
+gulp.task(
+    COMPILE.task,
+    gulp.series("init:prod", (done) => {
+        console.log(chalk.blue("Compiling..."));
+        rmrf.sync("./dist");
+        shell.exec("tsc");
+        console.log(chalk.green("Compiled!"));
+        done();
+    })
+);
 
 gulp.task(
     BUMP_START.task,
@@ -133,6 +145,7 @@ gulp.task(
     PUBLISH.task,
     gulp.series(
         BUMP_PATCH.task,
+        COMPILE.task,
         (done) => {
             shell.exec("npm publish");
             done();
@@ -144,6 +157,7 @@ gulp.task(
     PUBLISH_MINOR.task,
     gulp.series(
         BUMP_MINOR.task,
+        COMPILE.task,
         (done) => {
             shell.exec("npm publish");
             done();
@@ -155,6 +169,7 @@ gulp.task(
     PUBLISH_MAJOR.task,
     gulp.series(
         BUMP_MAJOR.task,
+        COMPILE.task,
         (done) => {
             shell.exec("npm publish");
             done();
